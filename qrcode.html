@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code | Cyber Security</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Cyber<span>Security</span></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#ameacas">Ameaças</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="qrcode.html" class="nav-button">QR Code</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="qr-page">
+        <section class="page-intro">
+            <p class="eyebrow">COMPARTILHE O PROJETO</p>
+            <h1>QR Codes</h1>
+            <p>
+                Acesse nosso site pelo celular ou crie seu próprio QR Code
+                com um link ou texto.
+            </p>
+        </section>
+
+        <section class="qr-layout">
+            <article class="qr-panel">
+                <div class="card-icon">🌐</div>
+                <h2>QR Code para acessar o site</h2>
+                <p>
+                    Escaneie este código com a câmera do celular para abrir
+                    a página inicial do projeto.
+                </p>
+
+                <div class="qr-output fixed-qr">
+                    <div id="site-qr"></div>
+                </div>
+
+                <p class="qr-address" id="site-address">
+                    https://lightis4.github.io/Cyber_seguranca/
+                </p>
+
+                <button class="button button-primary" id="download-site-qr">
+                    Baixar QR Code do site
+                </button>
+
+                <a href="quiz.html" class="button button-secondary qr-link-button">
+                    Acessar o quiz diretamente
+                </a>
+
+                <p class="small-note">
+                    O código aponta para a página inicial do site.
+                </p>
+            </article>
+
+            <article class="qr-panel">
+                <div class="card-icon">⚙️</div>
+                <h2>Gerador de QR Code</h2>
+                <p>
+                    Digite um link ou texto para criar seu próprio QR Code.
+                </p>
+
+                <form id="qr-form">
+                    <label for="qr-text">Link ou texto</label>
+                    <textarea
+                        id="qr-text"
+                        rows="4"
+                        placeholder="Digite um link ou texto..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="button button-primary">
+                        Gerar QR Code
+                    </button>
+                </form>
+
+                <div class="qr-output">
+                    <div id="custom-qr"></div>
+                </div>
+
+                <button class="button button-secondary" id="download-custom-qr" disabled>
+                    Baixar meu QR Code
+                </button>
+
+                <p class="small-note" id="qr-message">
+                    Seu QR Code personalizado aparecerá aqui.
+                </p>
+            </article>
+        </section>
+
+        <section class="qr-tip">
+            <h2>Como usar?</h2>
+            <ol>
+                <li>Para entrar no site, escaneie o QR Code da primeira área.</li>
+                <li>Para criar outro código, digite um link ou texto no gerador.</li>
+                <li>Baixe a imagem do código e compartilhe com outras pessoas.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">Cyber<span>Security</span></a>
+        <p>Aprender sobre segurança digital é o primeiro passo para se proteger.</p>
+    </footer>
+</body>
+</html>

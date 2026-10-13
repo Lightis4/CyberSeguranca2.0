@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Cibersegurança</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Cyber<span>Security</span></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#ameacas">Ameaças</a></li>
+                <li><a href="qrcode.html">QR Code</a></li>
+                <li><a href="quiz.html" class="nav-button">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="quiz-page">
+        <section class="page-intro">
+            <p class="eyebrow">TESTE SEUS CONHECIMENTOS</p>
+            <h1>Quiz de Cibersegurança</h1>
+            <p>
+                Responda às perguntas, controle seu tempo e acumule pontos.
+                Quanto mais rápido você acertar, mais pontos poderá ganhar.
+            </p>
+        </section>
+
+        <section class="quiz-container" id="quiz-container">
+            <div class="quiz-start" id="quiz-start">
+                <div class="card-icon">🧠</div>
+                <h2>Pronto para o desafio?</h2>
+                <p>10 perguntas • 15 segundos por pergunta • Bônus por rapidez</p>
+                <ul class="quiz-rules">
+                    <li>Cada resposta correta vale 100 pontos.</li>
+                    <li>Você ganha 10 pontos extras por cada segundo restante.</li>
+                    <li>Respostas erradas ou tempo esgotado valem zero pontos.</li>
+                </ul>
+                <button class="button button-primary" id="start-quiz">Começar quiz</button>
+            </div>
+
+            <div class="quiz-game" id="quiz-game" hidden>
+                <div class="quiz-stats">
+                    <div class="stat-box">
+                        <span class="stat-label">Pergunta</span>
+                        <strong><span id="question-number">1</span>/10</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Tempo</span>
+                        <strong><span id="timer">15</span>s</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Pontos</span>
+                        <strong id="current-score">0</strong>
+                    </div>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+
+                <h2 id="question-text"></h2>
+                <div class="answer-list" id="answer-list"></div>
+                <p class="answer-feedback" id="answer-feedback" aria-live="polite"></p>
+
+                <button class="button button-primary" id="next-question" hidden>
+                    Próxima pergunta
+                </button>
+            </div>
+
+            <div class="quiz-results" id="quiz-results" hidden>
+                <div class="card-icon">🏆</div>
+                <h2>Quiz concluído!</h2>
+                <p class="result-score">Sua pontuação: <strong id="final-score">0</strong></p>
+
+                <div class="results-grid">
+                    <div class="result-box">
+                        <span>Acertos</span>
+                        <strong id="correct-count">0</strong>
+                    </div>
+                    <div class="result-box">
+                        <span>Erros</span>
+                        <strong id="wrong-count">0</strong>
+                    </div>
+                    <div class="result-box">
+                        <span>Tempo total</span>
+                        <strong id="total-time">0s</strong>
+                    </div>
+                </div>
+
+                <p id="result-message"></p>
+                <button class="button button-primary" id="restart-quiz">Jogar novamente</button>
+                <a href="index.html" class="button button-secondary">Voltar ao início</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">Cyber<span>Security</span></a>
+        <p>Aprender sobre segurança digital é o primeiro passo para se proteger.</p>
+    </footer>
+</body>
+</html>
