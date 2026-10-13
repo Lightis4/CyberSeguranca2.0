@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const siteUrl = "https://lightis4.github.io/Cyber_seguranca/";
+    const siteUrl = "https://lightis4.github.io/CyberSeguranca2.0/";
 
     function createQRCode(container, value) {
         if (!container || typeof QRCode === "undefined") {
